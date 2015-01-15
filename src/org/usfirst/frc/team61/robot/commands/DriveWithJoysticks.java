@@ -23,14 +23,17 @@ public class DriveWithJoysticks extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        // when driving and not reversing, pass joystick values to drivetrain subsystem.
-        if (oi.weAreDriving()) {
-          if (oi.weAreReversing()){
-              drivetrain.reverseTankDrive(oi.getLeftSpeed(),oi.getRightSpeed());
-          } else {
-              drivetrain.tankDrive(oi.getLeftSpeed(),oi.getRightSpeed());
-          }
-        }
+        
+    	drivetrain.tankDrive(oi.getLeftSpeed(), oi.getRightSpeed());
+    	
+    	// when driving and not reversing, pass joystick values to drivetrain subsystem.
+//        if (oi.weAreDriving()) {
+//          if (oi.weAreReversing()){
+//              drivetrain.reverseTankDrive(oi.getLeftSpeed(),oi.getRightSpeed());
+//          } else {
+//              drivetrain.tankDrive(oi.getLeftSpeed(),oi.getRightSpeed());
+//          }
+//        }
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {

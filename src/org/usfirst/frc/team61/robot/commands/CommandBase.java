@@ -2,7 +2,7 @@ package org.usfirst.frc.team61.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc.team61.robot.OI;
-import org.usfirst.frc.team61.robot.subsystems.DriveTrain;
+import org.usfirst.frc.team61.robot.subsystems.*;
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -15,6 +15,8 @@ public abstract class CommandBase extends Command {
     public static OI oi;
     // Create a single static instance of all of your subsystems
     public static DriveTrain drivetrain = new DriveTrain();
+    public static Lift lift = new Lift();
+    public static Claw claw = new Claw();
     
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
