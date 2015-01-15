@@ -7,7 +7,7 @@ package org.usfirst.frc.team61.robot.commands;
 
 /**
  * Drive for a specified distance according to rotary encoder.
- * @author OAmour
+ * @author Team-61
  */
 public class DriveForDistance extends CommandBase {
     

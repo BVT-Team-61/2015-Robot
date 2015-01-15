@@ -7,7 +7,7 @@ package org.usfirst.frc.team61.robot.commands;
 
 /**
  *
- * @author William
+ * @author Team-61
  */
 public class WaitForTime extends CommandBase {
     

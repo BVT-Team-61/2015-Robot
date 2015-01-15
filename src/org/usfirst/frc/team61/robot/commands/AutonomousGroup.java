@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 
 /**
  *
- * @author FrankAdmin
+ * @author Team-61
  */
 public class AutonomousGroup extends CommandGroup {
     
