@@ -1,37 +1,53 @@
 package org.usfirst.frc.team61.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import org.usfirst.frc.team61.robot.RobotMap;
 
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
-public class OI {
-    //// CREATING BUTTONS
-    // One type of button is a joystick button which is any button on a joystick.
-    // You create one by telling it which joystick it's on and which button
-    // number it is.
-    // Joystick stick = new Joystick(port);
-    // Button button = new JoystickButton(stick, buttonNumber);
+public class OI {   
+
+   private static boolean reverseDriveMode=false ;
+   
+   // Define Joystick Objects
+   Joystick jLeft = new Joystick(RobotMap.leftStick);    
+   Joystick jRight = new Joystick(RobotMap.rightStick); 
+   
+   // Define Joystick Buttons
+   Button forwardButton = new JoystickButton (jRight,2);
+   Button reverseButton = new JoystickButton (jRight,1);
+   
+    // Placeholder method. Does nothing yet.
+    public boolean weAreDriving() {
+        return true;
+    }
     
-    // There are a few additional built in buttons you can use. Additionally,
-    // by subclassing Button you can create custom triggers and bind those to
-    // commands the same as any other Button.
+    // Determines if robot in reverse.
+    public boolean weAreReversing (){
+        // If the reverse button is hit, then we are reversing.
+        if (reverseButton.get()) {
+            reverseDriveMode = false;
+        }
+        // If the forward button is hit, then we are not reversing.
+        else if (forwardButton.get()) {
+            reverseDriveMode= true;
+        }
+        // Otherwise, just return whatever it was before
+        return reverseDriveMode ;
+    }
     
-    //// TRIGGERING COMMANDS WITH BUTTONS
-    // Once you have a button, it's trivial to bind it to a button in one of
-    // three ways:
+    // Method to return the left joystick Y Axis.
+    public double getLeftSpeed() {
+        return (jLeft.getY()); 
+    }
     
-    // Start the command when the button is pressed and let it run the command
-    // until it is finished as determined by it's isFinished method.
-    // button.whenPressed(new ExampleCommand());
-    
-    // Run the command while the button is being held down and interrupt it once
-    // the button is released.
-    // button.whileHeld(new ExampleCommand());
-    
-    // Start the command when the button is released  and let it run the command
-    // until it is finished as determined by it's isFinished method.
-    // button.whenReleased(new ExampleCommand());
+    // Same thing but for the right joystick Y Axis.
+    public double getRightSpeed() {
+        return (jRight.getY());
+    }
 }
 

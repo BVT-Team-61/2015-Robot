@@ -16,6 +16,9 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 public class Robot extends IterativeRobot {
 	public static OI oi;
 
+    public final String teamNo = "  61";
+    public final String versionNo = "2015-1-13.0";
+
     Command autonomousCommand;
 
     /**
@@ -26,6 +29,10 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
         // instantiate the command used for the autonomous period
         // autonomousCommand = new ExampleCommand();
+        // Ouput program info to system log.
+        System.out.println("+---------------------------------------------+");
+        System.out.println("| Team "+teamNo+" - Software Version: "+versionNo+" |");
+        System.out.println("+---------------------------------------------+");
     }
 	
 	public void disabledPeriodic() {
@@ -35,6 +42,7 @@ public class Robot extends IterativeRobot {
     public void autonomousInit() {
         // schedule the autonomous command (example)
         if (autonomousCommand != null) autonomousCommand.start();
+        System.out.println("Auto Enabled");
     }
 
     /**
@@ -50,6 +58,7 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
+        System.out.println("Tele-Op Enabled");
     }
 
     /**
@@ -57,6 +66,7 @@ public class Robot extends IterativeRobot {
      * You can use it to reset subsystems before shutting down.
      */
     public void disabledInit(){
+        System.out.println("Disabled");
 
     }
 
