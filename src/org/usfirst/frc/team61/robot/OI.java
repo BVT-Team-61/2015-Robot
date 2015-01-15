@@ -4,6 +4,9 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import org.usfirst.frc.team61.robot.RobotMap;
+import org.usfirst.frc.team61.robot.commands.ClawSuck;
+import org.usfirst.frc.team61.robot.commands.ClawSpin;
+import org.usfirst.frc.team61.robot.commands.;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -20,9 +23,16 @@ public class OI {
    Joystick jClaw = new Joystick(RobotMap.clawStick);
    
    // Define Joystick Buttons
-   Button forwardButton = new JoystickButton (jRight,2);
-   Button reverseButton = new JoystickButton (jRight,1);
+//   Button forwardButton = new JoystickButton (jRight,2);
+//   Button reverseButton = new JoystickButton (jRight,1);
+   Button suckButton = new JoystickButton(jClaw,1);
+   Button toggleButton = new JoystickButton(jClaw, 2);
+   Button spinButton = new JoystickButton(jClaw, 3);
    
+   public OI(){
+	   suckButton.whileHeld(new ClawSuck());
+	   spinButton.whileHeld(new ClawSpin());
+   }
     // Placeholder method. Does nothing yet.
 //    public boolean weAreDriving() {
 //        return true;
