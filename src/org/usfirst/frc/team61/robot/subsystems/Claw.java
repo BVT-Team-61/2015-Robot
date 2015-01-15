@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Claw extends Subsystem {
 
 	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
+		//TODO: Set Default Claw Command
 
 	}
 	public void openClaw(){

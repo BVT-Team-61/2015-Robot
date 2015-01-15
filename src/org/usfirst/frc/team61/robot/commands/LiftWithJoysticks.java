@@ -1,6 +1,7 @@
 package org.usfirst.frc.team61.robot.commands;
 
 
+//TODO: Add LiftWithJoysticks Javadoc
 public class LiftWithJoysticks extends CommandBase {
 
 	public LiftWithJoysticks(){

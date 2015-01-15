@@ -11,7 +11,6 @@ public class Lift extends Subsystem {
 	SpeedController elevMotor = new Talon(RobotMap.elevMotor);
 
 	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
 		setDefaultCommand(new LiftWithJoysticks());
 
 	}
