@@ -3,7 +3,8 @@ package org.usfirst.frc.team61.robot.commands;
 
 // TODO: Add DriveAtSpeed Javadoc
 /**
- *
+ *When the Command is being run it regulates the motors 
+ *so the left and the right run at the specified speed. (for Autonomous)
  */
 public class DriveAtSpeed extends CommandBase {
 

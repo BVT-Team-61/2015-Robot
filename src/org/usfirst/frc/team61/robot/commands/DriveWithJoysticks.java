@@ -6,7 +6,7 @@ package org.usfirst.frc.team61.robot.commands;
 
 //TODO: Add DriveWithJoysticks Javadoc
 /**
- *
+ *When the Joysticks are depressed a certain amount correlate to how much they are depressed. 
  * @author Team-61 
  */
 public class DriveWithJoysticks extends CommandBase {
