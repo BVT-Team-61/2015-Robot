@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import org.usfirst.frc.team61.robot.RobotMap;
 import org.usfirst.frc.team61.robot.commands.ClawSuck;
 import org.usfirst.frc.team61.robot.commands.ClawSpin;
-import org.usfirst.frc.team61.robot.commands.;
+
 
 /**
  * This class is the glue that binds the controls on the physical operator
