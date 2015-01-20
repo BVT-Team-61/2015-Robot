@@ -12,7 +12,7 @@ import org.usfirst.frc.team61.robot.subsystems.*;
  */
 public abstract class CommandBase extends Command {
 
-    public static OI oi;
+    public static OI oi = new OI();
     // Create a single static instance of all of your subsystems
     public static DriveTrain drivetrain = new DriveTrain();
     public static Lift lift = new Lift();
@@ -24,7 +24,7 @@ public abstract class CommandBase extends Command {
         // which commands extend), subsystems are not guaranteed to be
         // yet. Thus, their requires() statements may grab null pointers. Bad
         // news. Don't move it.
-        oi = new OI();
+        // oi = new OI();
 
     }
 
